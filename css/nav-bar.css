@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  color: yellow;
+  font-size: 20px;
+}
+
+.logo > picture > img {
+  width: 100px;
+  height: auto;
+}
+
+select {
+  padding: 5px;
+  font-size: 18px;
+  color: navy;
+  background-color: yellow;
+}
+
+select > option {
+}
+
+select:hover,
+select:focus {
+  outline: none;
+}
+
+.user-in > p > i {
+  font-size: 25px;
+}

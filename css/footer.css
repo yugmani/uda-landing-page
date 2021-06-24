@@ -1,0 +1,37 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  color: blue;
+}
+
+.social-media {
+  flex: 0.25;
+}
+
+.footer-subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: navy;
+  margin-bottom: 8px;
+}
+
+.social-media > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.social-media > ul > li {
+  padding: 5px 0;
+  font-size: 25px;
+}
+
+.social-media > ul > li > i:hover {
+  transition: 0.5s ease-in-out;
+  transform: rotate(180deg);
+  transform: scale(1.5);
+}
