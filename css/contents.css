@@ -1,0 +1,137 @@
+#contents {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  /* flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+#announcement,
+#description,
+#testimonial {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#announcement {
+  background-color: turquoise;
+}
+
+#description {
+  background-color: thistle;
+}
+
+.js-image {
+  background-image: url("../media/javascript_arch.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 100vw;
+}
+
+.section-title > h1 {
+  font-size: 48px;
+  padding: 10px 0;
+}
+
+.section-title > h4 {
+  font-size: 36px;
+  padding: 10px 0;
+}
+
+.btn-section {
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 15px;
+  background-color: yellow;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+}
+
+.cards {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card {
+  width: 330px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  background-color: whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: darksalmon;
+}
+
+picture {
+  align-self: center;
+  flex: 30%;
+  margin-bottom: 15px;
+}
+
+.card > picture > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.story {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headline {
+  font-family: cursive;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: darkmagenta;
+}
+
+.student-profile {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+span#profile-course {
+  font-weight: lighter;
+  color: darkgray;
+}
+
+ul > li {
+  text-align: left;
+  list-style-type: none;
+  margin: 15px;
+  font-size: 30px;
+}

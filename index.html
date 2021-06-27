@@ -25,10 +25,11 @@
           <!-- <label for="courses">Search Courses</label><br /> -->
           <select id="courses" name="courses">
             <option value="1" selected>Search Courses</option>
-            <option value="2">Advanced HTML5 & CSS3</option>
-            <option value="3">Basic JavaScript</option>
-            <option value="4">Intermediate JavaScript</option>
+            <option value="2">Basics of HTML5 & CSS3</option>
+            <option value="3">Advanced HTML5 & CSS3</option>
+            <option value="4">Basics of JavaScript</option>
             <option value="5">Advanced JavaScript</option>
+            <option value="6">Introductory jQuery</option>
           </select>
         </div>
         <div class="user-in">
@@ -36,7 +37,46 @@
           <!-- <button>Register/Sign In</button> -->
         </div>
       </nav>
-      <main class="contents"></main>
+      <main id="contents">
+        <section id="announcement">
+          <div class="section-title">
+            <h1>Mastering the Basics of JavaScript</h1>
+            <h4>Anyone can learn coding! So you too.</h4>
+            <div class="js-image"></div>
+          </div>
+          <div class="btn-section">
+            <button class="btn btn-course">Enroll now</button><br />
+            <button class="btn btn-sign">
+              Already enrolled ? Sign in here
+            </button>
+          </div>
+        </section>
+        <section id="testimonial">
+          <div class="section-title">
+            <h1>What do students say about our courses?</h1>
+          </div>
+          <div class="cards"></div>
+        </section>
+        <section id="description">
+          <div class="section-title">
+            <h1>What are the benefits of the course?</h1>
+          </div>
+          <ul>
+            <li>Live Coaching by software engineer twice a week</li>
+            <li>24/7 support by our technical assistants</li>
+            <li>Choice of online or in campus.</li>
+            <li>Career Services</li>
+            <li>Unlimited access of video records</li>
+            <li>
+              Free membership of Community groups: Facebook, Discord, Slack etc.
+            </li>
+          </ul>
+          <div class="btn-section">
+            <button class="btn">Enroll now</button><br />
+            <button class="btn">Already enrolled ? Sign in here</button>
+          </div>
+        </section>
+      </main>
       <footer>
         <div class="author">
           <div class="footer-subtitle">@Yoog</div>
@@ -56,5 +96,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
