@@ -9,6 +9,7 @@
 }
 
 #announcement,
+#major_courses,
 #description,
 #testimonial {
   width: 100%;
@@ -28,8 +29,12 @@
   background-color: thistle;
 }
 
+#major_courses {
+  background-color: lightgoldenrodyellow;
+}
+
 .js-image {
-  background-image: url("../media/javascript_arch.png");
+  background-image: url("../media/js_arch.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -119,9 +124,22 @@ picture {
   color: darkmagenta;
 }
 
-.student-profile {
+.brief-span {
+  font-weight: bold;
+  color: gray;
+}
+
+.profile {
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.course_title {
+  align-self: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: navy;
 }
 
 span#profile-course {

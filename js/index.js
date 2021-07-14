@@ -32,14 +32,77 @@ const students = [
 ];
 
 const courses = [
-  "Basics of HTML5/CSS3",
-  "Advanced HTML5/CSS3",
-  "Basics of JavaScript",
-  "Advanced JavaScript",
-  "Introducotry jQuery",
+  {
+    title: "Basics to Advanced HTML5/CSS3",
+    logo: "html5.png",
+    duration: 4,
+    hours: 20,
+    instructors: ["Madhu", "Adam", "Maya"],
+    cost: 200,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, necessitatibus.",
+    weblink: "https://www.w3schools.com/html/default.asp",
+  },
+
+  {
+    title: "Basics to Advanced JavaScript",
+    logo: "js.png",
+    duration: 4,
+    hours: 30,
+    instructors: ["Shova", "Prakash", "Barun"],
+    cost: 400,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, necessitatibus.",
+    weblink: "https://www.w3schools.com/js/default.asp",
+  },
+  {
+    title: "Introducotry jQuery",
+    logo: "jquery.png",
+    duration: 2,
+    hours: 20,
+    instructors: ["Vikash", "Aakash", "Jennifer"],
+    cost: 200,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, necessitatibus.",
+    weblink: "https://www.w3schools.com/js/default.asp",
+  },
 ];
 
-const cardsEl = document.querySelector(".cards");
+// cards display of courses
+const cards_courses = document.querySelector(".course_cards");
+
+// function coursesCardsDisplay(arr) {
+//   return arr.map((course) => course);
+// }
+
+let html_course = "";
+const displayCourse = (items) => {
+  items.map((item) => {
+    html_course += `<div class="card">
+                <picture>
+                 <img src="../media/${item["logo"]}" alt="${item["name"]}" />
+                </picture>
+              <div class="story">
+                <div class="course_title">
+                  ${item["title"]}
+                </div>
+                <div class="brief">
+                <div>Duration:<span class="brief-span"> ${item["duration"]} weeks & ${item["hours"]}hrs per week<span></div>             
+                <div>Course Fee: <span class="brief-span"> $${item["cost"]}</span></div>
+                </div>
+                <div class="headline"> ${item["description"]}</div>
+              </div>
+              <a href=${item["weblink"]}>More...</a>
+            </div>
+  `;
+  });
+  cards_courses.innerHTML = html_course;
+};
+
+displayCourse(courses);
+
+// cards display style of testimonials
+const cardsEl = document.querySelector(".testi_cards");
 
 function testimonialQuote(arr) {
   return arr.filter((student) => student["isGraduated"] === true);
@@ -56,7 +119,7 @@ const displayQuote = (items) => {
                 <blockquote class="headline">
                   ${item["feedback"]}
                 </blockquote>
-                <div class="student-profile">${item["name"]},<span id="profile-course"> ${item["course"]}</span></div>
+                <div class="profile">${item["name"]},<span id="profile-course"> ${item["course"]}</span></div>
               </div>
             </div>
   `;
