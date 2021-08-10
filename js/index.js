@@ -29,8 +29,6 @@ const displayCourse = (items) => {
   cards_courses.innerHTML = html_course;
 };
 
-displayCourse(courses);
-
 // cards display style of testimonials
 const cardsEl = document.querySelector(".testi_cards");
 
@@ -57,4 +55,18 @@ const displayQuote = (items) => {
   cardsEl.innerHTML = html;
 };
 
+// To direct to enrollment form when clicking on enroll button
+function enrollmentButton() {
+  const btnEnrollment = document.querySelectorAll(".btn-course");
+
+  for (let i = 0; i < btnEnrollment.length; i++) {
+    btnEnrollment[i].addEventListener("click", function () {
+      location.href = "../forms.html";
+    });
+  }
+}
+
+// invoking functions;
+displayCourse(courses);
 displayQuote(testimonialQuote(students));
+enrollmentButton();
