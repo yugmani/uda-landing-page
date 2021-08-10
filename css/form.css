@@ -1,0 +1,46 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  width: 60%;
+  height: 100vh;
+  border: 1px double gray;
+  font-size: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  background-color: whitesmoke;
+  margin: 10px 0;
+  padding: 5px 0;
+  border: 1px solid lightgray;
+}
+
+select > option {
+  background-color: aquamarine;
+  color: navy;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+#virtual {
+  margin-left: 20px;
+}
+
+.enrollment_message {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px double gold;
+  padding: 15px;
+}
+
+.enrollment_message h1 {
+  color: blue;
+}

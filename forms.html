@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enrollment Form</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enrollment Form</h1>
+      <form action="" id="enrollment_form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="eg. Peter" recquired /><br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="eg. exmaple@some.com"
+          recquired
+        /><br />
+        <label for="phone">Phone</label>
+        <input type="phone" id="phone" placeholder="+1 (222) 222-2222" /><br />
+        <label for="city">City & State</label>
+        <input
+          type="text"
+          id="city"
+          placeholder="Hollywood, California"
+        /><br />
+        <select name="course" required>
+          <option value="" disabled selected hidden>Select the Course</option>
+          <option value="html_css">Basics to Advanced HTML5/CSS3</option>
+          <option value="js">Basics to Advanced JavaScript</option>
+          <option value="jquery">Introductory jQuery</option>
+        </select>
+        <div>
+          <p>Which mode of class do you prefer?</p>
+
+          <input type="radio" id="face" name="mode" value="face" />
+          <label for="mode">In person</label>
+          <input type="radio" id="virtual" name="mode" value="virtual" />
+          <label for="mode">Online</label>
+        </div>
+        <input type="submit" value="submit" id="form_submit" />
+      </form>
+    </div>
+    <script src="js/form.js"></script>
+  </body>
+</html>
