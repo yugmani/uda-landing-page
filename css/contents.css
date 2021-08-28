@@ -8,10 +8,10 @@
   align-items: center; */
 }
 
-#announcement,
-#major_courses,
+#home,
+#courses,
 #description,
-#testimonial {
+#testimonials {
   width: 100%;
   min-height: 90vh;
   display: flex;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-#announcement {
+#home {
   background-color: turquoise;
 }
 
@@ -29,7 +29,7 @@
   background-color: thistle;
 }
 
-#major_courses {
+#courses {
   background-color: lightgoldenrodyellow;
 }
 
@@ -64,10 +64,26 @@
   border: none;
   border-radius: 15px;
   background-color: yellow;
+  cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
+  outline: none;
+}
+
+select {
+  padding: 5px;
+  font-size: 18px;
+  color: navy;
+  background-color: white;
+}
+
+select > option {
+}
+
+select:hover,
+select:focus {
   outline: none;
 }
 
@@ -149,9 +165,14 @@ span#profile-course {
   color: darkgray;
 }
 
-ul > li {
+#description > ul > li {
   text-align: left;
   list-style-type: none;
-  margin: 15px;
+  margin: 10px;
   font-size: 25px;
+  padding: 3px 5px;
+}
+
+#description > ul > li:nth-child(odd) {
+  background-color: lightgray;
 }

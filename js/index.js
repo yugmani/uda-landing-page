@@ -66,7 +66,30 @@ function enrollmentButton() {
   }
 }
 
+// Navigation and scrolling
+const navlist = document.querySelectorAll(".nav-item");
+
+// Adding event listener to scrollview of target id;
+navlist.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    removeActiveClass();
+    const id = e.target.textContent.toLowerCase();
+    e.target.className = "active";
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// To remove class 'active' from each item;
+function removeActiveClass() {
+  navlist.forEach((item) => {
+    item.classList.remove("active");
+  });
+}
+
 // invoking functions;
 displayCourse(courses);
 displayQuote(testimonialQuote(students));
 enrollmentButton();
+
+navScrolling();

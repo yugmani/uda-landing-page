@@ -1,9 +1,9 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* padding: 5px 10px; */
-  color: yellow;
+  /* color: yellow; */
   font-size: 20px;
 }
 
@@ -16,19 +16,20 @@ nav {
   height: 60px;
 }
 
-select {
-  padding: 5px;
+.navbar {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.navbar > li {
   font-size: 18px;
-  color: navy;
-  background-color: yellow;
-}
-
-select > option {
-}
-
-select:hover,
-select:focus {
-  outline: none;
+  padding: 5px 5px;
+  margin: 0 10px;
+  font-weight: lighter;
 }
 
 .user-in > p {
@@ -37,4 +38,18 @@ select:focus {
 .user-in > p > i {
   /* padding: 5px 10px; */
   font-size: 25px;
+  color: yellow;
+}
+
+.active {
+  color: black;
+  background-color: whitesmoke;
+}
+.active:hover,
+.navbar > li:hover {
+  color: yellow;
+  background-color: black;
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }

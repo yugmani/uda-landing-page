@@ -33,6 +33,7 @@ footer {
 
 .social-media > ul > li {
   font-size: 25px;
+  margin: 0 10px;
 }
 
 .social-media > ul > li > i:hover {

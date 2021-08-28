@@ -19,6 +19,7 @@
     "n n n n n n"
     " c c c c c c"
     "f f f f f f";
+  position: relative;
 }
 
 nav {
@@ -34,4 +35,13 @@ main {
 footer {
   grid-area: f;
   background-color: lightpink;
+}
+
+.logo:hover,
+.user-in:hover {
+  /* color: yellow;
+  background-color: black; */
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
