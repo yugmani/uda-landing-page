@@ -1,16 +1,14 @@
 // cards display of courses
 const cards_courses = document.querySelector(".course_cards");
 
-// function coursesCardsDisplay(arr) {
-//   return arr.map((course) => course);
-// }
-
 let html_course = "";
+
+// function to display course items in the page
 const displayCourse = (items) => {
   items.map((item) => {
     html_course += `<div class="card">
                 <picture>
-                 <img src="../media/${item["logo"]}" alt="${item["name"]}" />
+                 <img src="media/${item["logo"]}" alt="${item["name"]}" />
                 </picture>
               <div class="story">
                 <div class="course_title">
@@ -26,22 +24,26 @@ const displayCourse = (items) => {
             </div>
   `;
   });
+
   cards_courses.innerHTML = html_course;
 };
 
 // cards display style of testimonials
 const cardsEl = document.querySelector(".testi_cards");
 
+// function iterating through the data of student data;
 function testimonialQuote(arr) {
   return arr.filter((student) => student["isGraduated"] === true);
 }
 
 let html = "";
+
+// function to display quotes into page
 const displayQuote = (items) => {
   items.map((item) => {
     html += `<div class="card">
                 <picture>
-                 <img src="../media/${item["photo"]}" alt="${item["name"]}" />
+                 <img src="media/${item["photo"]}" alt="${item["name"]}" />
                 </picture>
               <div class="story">
                 <blockquote class="headline">
@@ -52,6 +54,7 @@ const displayQuote = (items) => {
             </div>
   `;
   });
+
   cardsEl.innerHTML = html;
 };
 
@@ -91,5 +94,3 @@ function removeActiveClass() {
 displayCourse(courses);
 displayQuote(testimonialQuote(students));
 enrollmentButton();
-
-navScrolling();
