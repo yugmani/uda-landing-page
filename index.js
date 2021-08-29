@@ -8,7 +8,7 @@ const displayCourse = (items) => {
   items.map((item) => {
     html_course += `<div class="card">
                 <picture>
-                 <img src="media/${item["logo"]}" alt="${item["name"]}" />
+                 <img src="./media/${item["logo"]}" alt="${item["name"]}" />
                 </picture>
               <div class="story">
                 <div class="course_title">
@@ -43,7 +43,7 @@ const displayQuote = (items) => {
   items.map((item) => {
     html += `<div class="card">
                 <picture>
-                 <img src="media/${item["photo"]}" alt="${item["name"]}" />
+                 <img src="./media/${item["photo"]}" alt="${item["name"]}" />
                 </picture>
               <div class="story">
                 <blockquote class="headline">

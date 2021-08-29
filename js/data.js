@@ -4,7 +4,7 @@ const students = [
     name: "Vernonica",
     dateIn: "01/01/2021",
     birthDate: "02/02/2000",
-    photo: "60.JPG",
+    photo: "60.jpg",
     course: "Basic JavaScript",
     feedback:
       "This is the course you should not miss, if you want to master the basics of JavaScript. We don't just learn coding but also we collaborate, teach each other and explore more.",
@@ -48,7 +48,7 @@ const courses = [
 
   {
     title: "Basics to Advanced JavaScript",
-    logo: "js.png",
+    logo: "Js.png",
     duration: 4,
     hours: 30,
     instructors: ["Shova", "Prakash", "Barun"],
