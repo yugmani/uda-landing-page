@@ -1,0 +1,60 @@
+@media screen and (max-width: 480px) {
+  #home,
+  #courses,
+  #description,
+  #testimonials {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    height: auto;
+    min-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .navbar {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .logo > picture > img,
+  .user-in > p > i {
+    font-size: 100px;
+    width: 60%;
+    height: auto;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 10px 0;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
