@@ -1,3 +1,24 @@
+// Generating navbar items
+(function () {
+  // array of navbar items
+  const navItems = ["home", "courses", "testimonials", "description"];
+
+  const navEl = document.querySelector(".navbar");
+  let html_navbar = "";
+
+  //iterating through nav items and displaying on the page
+  navItems.map((item) => {
+    // default active state for nav item 'home';
+    if (navItems.indexOf(item) === 0) {
+      html_navbar += `<li class="nav-item active">${item}</li>`;
+    } else {
+      html_navbar += `<li class="nav-item">${item}</li>`;
+    }
+  });
+
+  navEl.innerHTML = html_navbar;
+})();
+
 // cards display of courses
 const cards_courses = document.querySelector(".course_cards");
 
@@ -71,11 +92,12 @@ function enrollmentButton() {
 
 // Navigation and scrolling
 const navlist = document.querySelectorAll(".nav-item");
-
+console.log(navlist);
 // Adding event listener to scrollview of target id;
 navlist.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
+    console.log(e.target);
     removeActiveClass();
     const id = e.target.textContent.toLowerCase();
     e.target.className = "active";
