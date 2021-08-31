@@ -10,7 +10,8 @@
 }
 
 .container {
-  background-color: bisque;
+  /* background-color: bisque; */
+  background-color: white;
   width: 100%;
   min-height: 100vh;
 
@@ -40,7 +41,8 @@ main {
 
 footer {
   /* grid-area: f; */
-  background-color: lightpink;
+  /* background-color: lightpink; */
+  background-color: darkgray;
 }
 
 .logo:hover,

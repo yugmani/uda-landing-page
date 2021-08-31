@@ -92,23 +92,31 @@ function enrollmentButton() {
 
 // Navigation and scrolling
 const navlist = document.querySelectorAll(".nav-item");
-console.log(navlist);
+const sectionList = document.querySelectorAll("section");
+
 // Adding event listener to scrollview of target id;
 navlist.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(e.target);
+    //remove active class
     removeActiveClass();
     const id = e.target.textContent.toLowerCase();
+    //add active class
     e.target.className = "active";
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id).classList.add("section_active");
   });
 });
 
 // To remove class 'active' from each item;
 function removeActiveClass() {
+  //to remove active class from navbar items
   navlist.forEach((item) => {
     item.classList.remove("active");
+  });
+  // to remove active class from sections
+  sectionList.forEach((element) => {
+    element.classList.remove("section_active");
   });
 }
 
