@@ -21,9 +21,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* padding-top: 10px; */
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 #home {
@@ -147,6 +148,7 @@ picture {
 }
 
 .story {
+  align-self: center;
   flex: 70%;
   display: flex;
   flex-direction: column;
@@ -177,6 +179,7 @@ picture {
   font-size: 20px;
   margin-bottom: 10px;
   color: navy;
+  text-align: center;
 }
 
 span#profile-course {

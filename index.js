@@ -1,5 +1,8 @@
 // array of navbar items
 const navItems = ["home", "courses", "testimonials", "description"];
+const hamburger = document.getElementById("hamburger");
+const navClass = document.querySelector(".nav");
+const closeWindow = document.getElementById("close-window");
 
 // Generating navbar items
 (function () {
@@ -120,11 +123,6 @@ function removeActiveClass() {
   });
 }
 
-// invoking functions;
-displayCourse(courses);
-displayQuote(testimonialQuote(students));
-enrollmentButton();
-
 // Implementing the Intersection Observer API
 const sections = document.querySelectorAll(".section");
 
@@ -153,3 +151,24 @@ const myObserver = new IntersectionObserver(cbFunction, myOptions);
 sections.forEach((section) => {
   myObserver.observe(section);
 });
+
+// Eventlistner to display menu bar
+hamburger.addEventListener("click", (e) => {
+  e.preventDefault();
+  hamburger.style.display = "none";
+  navClass.style.display = "block";
+  closeWindow.style.display = "block";
+});
+
+// Eventlistener to close menu bar
+closeWindow.addEventListener("click", (e) => {
+  e.preventDefault();
+  hamburger.style.display = "block";
+  navClass.style.display = "none";
+  closeWindow.style.display = "none";
+});
+
+// invoking functions;
+displayCourse(courses);
+displayQuote(testimonialQuote(students));
+enrollmentButton();
