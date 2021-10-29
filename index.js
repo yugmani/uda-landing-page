@@ -1,8 +1,8 @@
+// array of navbar items
+const navItems = ["home", "courses", "testimonials", "description"];
+
 // Generating navbar items
 (function () {
-  // array of navbar items
-  const navItems = ["home", "courses", "testimonials", "description"];
-
   const navEl = document.querySelector(".navbar");
   let html_navbar = "";
 
@@ -41,7 +41,7 @@ const displayCourse = (items) => {
                 </div>
                 <div class="headline"> ${item["description"]}</div>
               </div>
-              <a href=${item["weblink"]}>More...</a>
+              <a href=${item["weblink"]} target="_blank">More...</a>
             </div>
   `;
   });
@@ -90,7 +90,7 @@ function enrollmentButton() {
   }
 }
 
-// Navigation and scrolling
+// Navigation and scrolling while clicking on menu items
 const navlist = document.querySelectorAll(".nav-item");
 const sectionList = document.querySelectorAll("section");
 
@@ -124,3 +124,32 @@ function removeActiveClass() {
 displayCourse(courses);
 displayQuote(testimonialQuote(students));
 enrollmentButton();
+
+// Implementing the Intersection Observer API
+const sections = document.querySelectorAll(".section");
+
+const myOptions = {
+  root: null,
+  thresholds: 0.3,
+  rootMargin: "-100px",
+};
+
+const cbFunction = (entries) => {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    removeActiveClass();
+
+    const idName = entry.target.attributes[0].nodeValue;
+    const navlistIndexed = navlist[navItems.indexOf(idName)];
+    navlistIndexed.classList.add("active");
+  } else {
+    console.log("");
+  }
+};
+
+const myObserver = new IntersectionObserver(cbFunction, myOptions);
+
+sections.forEach((section) => {
+  myObserver.observe(section);
+});

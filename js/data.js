@@ -51,7 +51,7 @@ const courses = [
     logo: "Js.png",
     duration: 4,
     hours: 30,
-    instructors: ["Shova", "Prakash", "Barun"],
+    instructors: ["Koshi", "Gandaki", "Karnali"],
     cost: 400,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, necessitatibus.",
@@ -62,7 +62,7 @@ const courses = [
     logo: "jquery.png",
     duration: 2,
     hours: 20,
-    instructors: ["Vikash", "Aakash", "Jennifer"],
+    instructors: ["Manasalu", "Annapurna", "Jennifer"],
     cost: 200,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, necessitatibus.",
