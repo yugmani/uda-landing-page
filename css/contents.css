@@ -14,7 +14,7 @@
 #testimonials {
   margin: 0 auto;
   width: 98%;
-  height: 100vh;
+  min-height: 100vh;
   /* height: auto; */
   display: flex;
   flex-direction: column;
@@ -25,6 +25,7 @@
   /* padding-top: 10px; */
   margin-bottom: 20px;
   overflow: hidden;
+  border-bottom: 1px solid navy;
 }
 
 #home {
@@ -63,11 +64,14 @@
 .section-title > h1 {
   font-size: 48px;
   padding: 10px 0;
+  font-family: "Merriweather", serif;
 }
 
 .section-title > h4 {
   font-size: 36px;
   padding: 10px 0;
+  color: navy;
+  font-family: "Open Sans", sans-serif;
 }
 
 .btn-section {
@@ -157,14 +161,27 @@ picture {
 }
 
 .headline {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: darkmagenta;
+  font-weight: lighter;
+  font-family: "Open Sans", sans-serif;
+}
+
+.course-headline {
   font-family: cursive;
   font-size: 18px;
   margin-bottom: 15px;
   color: darkmagenta;
+  font-weight: lighter;
+}
+
+blockquote {
+  font-family: "Open Sans", sans-serif;
 }
 
 .brief-span {
-  font-weight: bold;
+  font-weight: regular;
   color: gray;
 }
 
@@ -189,7 +206,7 @@ span#profile-course {
 
 #description > ul > li {
   text-align: left;
-  list-style-type: none;
+  list-style-type: square;
   margin: 10px;
   font-size: 25px;
   padding: 3px 5px;

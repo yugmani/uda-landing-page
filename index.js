@@ -30,23 +30,25 @@ let html_course = "";
 // function to display course items in the page
 const displayCourse = (items) => {
   items.map((item) => {
-    html_course += `<div class="card">
-                <picture>
-                 <img src="./media/${item["logo"]}" alt="${item["name"]}" />
-                </picture>
-              <div class="story">
+    html_course += `
+        <div class="card">
+            <picture>
+                <img src="./media/${item["logo"]}" alt="${item["name"]}" />
+            </picture>
+              
+            <div class="story">
                 <div class="course_title">
                   ${item["title"]}
                 </div>
                 <div class="brief">
-                <div>Duration:<span class="brief-span"> ${item["duration"]} weeks & ${item["hours"]}hrs per week<span></div>             
-                <div>Course Fee: <span class="brief-span"> $${item["cost"]}</span></div>
+                  <div><strong>Duration: </strong><span class="brief-span">${item["duration"]} weeks @ ${item["hours"]}hrs per week<span></div>             
+                  <div><strong>Course Fee:</strong><span class="brief-span"> $${item["cost"]}</span></div>
                 </div>
-                <div class="headline"> ${item["description"]}</div>
-              </div>
-              <a href=${item["weblink"]} target="_blank">More...</a>
+                <div class="course-headline"> ${item["description"]}</div>
             </div>
-  `;
+            <a href=${item["weblink"]} target="_blank">More...</a>
+        </div>
+    `;
   });
 
   cards_courses.innerHTML = html_course;
@@ -141,8 +143,6 @@ const cbFunction = (entries) => {
     const idName = entry.target.attributes[0].nodeValue;
     const navlistIndexed = navlist[navItems.indexOf(idName)];
     navlistIndexed.classList.add("active");
-  } else {
-    console.log("");
   }
 };
 

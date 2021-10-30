@@ -4,7 +4,7 @@
 
 ## Landing Page for the course of `Mastering the Basics of JavaScript'
 
-- A model of web page for the course of 'JavaScript' where the users have access to features of course.
+- A model of web page that highlights the features of 'JavaScript' trainings.
 
 ## User Story
 
@@ -19,7 +19,7 @@
 
 - HTML
 - CSS ( including flex and grid)
-- JavaScript
+- JavaScript funcamentals, functions, DOM, Intersection Observer etc.
 - font-awesome
 
 ## Limitation ( Future Development)
