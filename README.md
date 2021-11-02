@@ -37,7 +37,7 @@
 
 ## License:
 
-- :copyright:NA
+- **uda-landing-page** is :copyright:2021 Yug Gurung. It is free web design, and may be redistributed under the terms specified in the LICENSE file.
 
 ## Author
 
@@ -45,5 +45,11 @@
 
 ## Credits
 
-- Some photographs:good:👍 are taken from [Randomuser.com](https://randomuser.me/)
+- Some photographs👍 are taken from [Randomuser.com](https://randomuser.me/)
 - I appreciate :heart:creative and beautiful reviews/comments by all reviewers of _Udacity, Nanodegree Front-End Web Developer_:star:.
+
+## About uda-landing-page
+
+uda-landing-page is maintained and funded by Yug Gurung. The names and logos for uda-landing-page are trademarks of _uda-landing-page_.
+
+I love developing/designing websites! See my other projects or hire me to design, develop, and grow your product:fireworks:.
