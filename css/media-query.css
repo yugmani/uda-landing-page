@@ -1,3 +1,6 @@
+/*Adding Styles for different media screen sizes */
+
+/* Style for small mobile screen size */
 @media screen and (max-width: 480px) {
   #hamburger {
     display: block;
@@ -53,6 +56,7 @@
   }
 }
 
+/* Style for medium size mobile screen */
 @media screen and (max-width: 768px) {
   #hamburger {
     display: block;
@@ -60,6 +64,24 @@
 
   .nav {
     display: none;
+    height: auto;
+    min-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .navbar {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .logo > picture > img,
+  .user-in > p > i {
+    font-size: 100px;
+    width: 60%;
+    height: auto;
   }
 
   #home,
@@ -77,11 +99,11 @@
   }
 
   .card {
-    width: 100%;
     margin: 10px 0;
   }
 }
 
+/* Style for bigger screen size */
 @media screen and (max-width: 1024px) {
   #home,
   #courses,

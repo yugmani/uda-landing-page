@@ -41,7 +41,8 @@ const courses = [
     hours: 20,
     instructors: ["Madhu", "Adam", "Maya"],
     cost: 200,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Distinctio, necessitatibus",
     weblink: "https://www.w3schools.com/html/default.asp",
   },
 

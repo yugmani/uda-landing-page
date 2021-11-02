@@ -1,6 +1,7 @@
+/* Styles for Navbar */
+
 #hamburger,
 #close-window {
-  /* align-self: center; */
   display: none;
   background-color: navy;
   color: white;
@@ -25,8 +26,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 5px 10px; */
-  /* color: yellow; */
   font-size: 20px;
 }
 
@@ -59,7 +58,6 @@
   margin-right: 20px;
 }
 .user-in > p > i {
-  /* padding: 5px 10px; */
   font-size: 25px;
   color: yellow;
 }

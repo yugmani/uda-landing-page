@@ -1,39 +1,38 @@
-// array of navbar items
-const navItems = ["home", "courses", "testimonials", "description"];
-const hamburger = document.getElementById("hamburger");
-const navClass = document.querySelector(".nav");
-const closeWindow = document.getElementById("close-window");
+// Function to Generate navbar items
+const sections = document.querySelectorAll(".section");
 
-// Generating navbar items
+let ids = []; // Getting array of section ID names
+
+sections.forEach((section) => {
+  ids.push(section.attributes[0].nodeValue);
+});
+
 (function () {
   const navEl = document.querySelector(".navbar");
   let html_navbar = "";
 
   //iterating through nav items and displaying on the page
-  navItems.map((item) => {
-    // default active state for nav item 'home';
-    if (navItems.indexOf(item) === 0) {
-      html_navbar += `<li class="nav-item active">${item}</li>`;
+  ids.map((id) => {
+    if (ids.indexOf(id) === 0) {
+      html_navbar += `<li class="nav-item active">${id}</li>`;
     } else {
-      html_navbar += `<li class="nav-item">${item}</li>`;
+      html_navbar += `<li class="nav-item">${id}</li>`;
     }
   });
 
   navEl.innerHTML = html_navbar;
 })();
 
-// cards display of courses
+// function to display course items in the page
 const cards_courses = document.querySelector(".course_cards");
-
 let html_course = "";
 
-// function to display course items in the page
 const displayCourse = (items) => {
   items.map((item) => {
     html_course += `
         <div class="card">
             <picture>
-                <img src="./media/${item["logo"]}" alt="${item["name"]}" />
+                <img src="./assets/media/${item["logo"]}" alt="${item["name"]}" />
             </picture>
               
             <div class="story">
@@ -54,22 +53,21 @@ const displayCourse = (items) => {
   cards_courses.innerHTML = html_course;
 };
 
-// cards display style of testimonials
+// function iterating through the data of student data;
 const cardsEl = document.querySelector(".testi_cards");
 
-// function iterating through the data of student data;
 function testimonialQuote(arr) {
   return arr.filter((student) => student["isGraduated"] === true);
 }
 
+// function to display quotes into page
 let html = "";
 
-// function to display quotes into page
 const displayQuote = (items) => {
   items.map((item) => {
     html += `<div class="card">
                 <picture>
-                 <img src="./media/${item["photo"]}" alt="${item["name"]}" />
+                 <img src="./assets/media/${item["photo"]}" alt="${item["name"]}" />
                 </picture>
               <div class="story">
                 <blockquote class="headline">
@@ -84,13 +82,13 @@ const displayQuote = (items) => {
   cardsEl.innerHTML = html;
 };
 
-// To direct to enrollment form when clicking on enroll button
+// To direct to enrollment form while clicking on enroll button
 function enrollmentButton() {
   const btnEnrollment = document.querySelectorAll(".btn-course");
 
   for (let i = 0; i < btnEnrollment.length; i++) {
     btnEnrollment[i].addEventListener("click", function () {
-      location.href = "../forms.html";
+      location.href = "../assets/forms.html";
     });
   }
 }
@@ -109,25 +107,43 @@ navlist.forEach((item) => {
     //add active class
     e.target.className = "active";
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    document.getElementById(id).classList.add("section_active");
   });
 });
 
 // To remove class 'active' from each item;
 function removeActiveClass() {
-  //to remove active class from navbar items
   navlist.forEach((item) => {
     item.classList.remove("active");
   });
-  // to remove active class from sections
-  sectionList.forEach((element) => {
-    element.classList.remove("section_active");
-  });
 }
 
-// Implementing the Intersection Observer API
-const sections = document.querySelectorAll(".section");
+// Eventlistner to display menu bar
+const hamburger = document.getElementById("hamburger");
 
+hamburger.addEventListener("click", (e) => {
+  e.preventDefault();
+  hamburger.style.display = "none";
+  navClass.style.display = "block";
+  closeWindow.style.display = "block";
+});
+
+// Eventlistener to close menu bar
+const closeWindow = document.getElementById("close-window");
+const navClass = document.querySelector(".nav");
+
+closeWindow.addEventListener("click", (e) => {
+  e.preventDefault();
+  hamburger.style.display = "block";
+  navClass.style.display = "none";
+  closeWindow.style.display = "none";
+});
+
+// invoking functions;
+displayCourse(courses);
+displayQuote(testimonialQuote(students));
+enrollmentButton();
+
+// Implementing the Intersection Observer API
 const myOptions = {
   root: null,
   thresholds: 0.3,
@@ -141,7 +157,7 @@ const cbFunction = (entries) => {
     removeActiveClass();
 
     const idName = entry.target.attributes[0].nodeValue;
-    const navlistIndexed = navlist[navItems.indexOf(idName)];
+    const navlistIndexed = navlist[ids.indexOf(idName)];
     navlistIndexed.classList.add("active");
   }
 };
@@ -151,24 +167,3 @@ const myObserver = new IntersectionObserver(cbFunction, myOptions);
 sections.forEach((section) => {
   myObserver.observe(section);
 });
-
-// Eventlistner to display menu bar
-hamburger.addEventListener("click", (e) => {
-  e.preventDefault();
-  hamburger.style.display = "none";
-  navClass.style.display = "block";
-  closeWindow.style.display = "block";
-});
-
-// Eventlistener to close menu bar
-closeWindow.addEventListener("click", (e) => {
-  e.preventDefault();
-  hamburger.style.display = "block";
-  navClass.style.display = "none";
-  closeWindow.style.display = "none";
-});
-
-// invoking functions;
-displayCourse(courses);
-displayQuote(testimonialQuote(students));
-enrollmentButton();

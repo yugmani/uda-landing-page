@@ -1,3 +1,4 @@
+/* Importing styles from other CSS files */
 @import "./nav-bar.css";
 @import "./footer.css";
 @import "./contents.css";
@@ -21,19 +22,8 @@ body {
 }
 
 .container {
-  /* background-color: bisque; */
   background-color: white;
   width: 100%;
-  /* min-height: 100vh; */
-
-  /* display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 60px auto 100px;
-  /* grid-template-rows: auto auto auto; */
-  /* grid-template-areas:
-    "n n n n n n"
-    "c c c c c c"
-    "f f f f f f"; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,29 +31,15 @@ body {
 }
 
 nav {
-  /* grid-area: n; */
   background-color: navy;
 }
 
-main {
-  /* grid-area: c; */
-  /* background-color: cornsilk; */
-}
-
-section {
-  /* margin-top: 50px; */
-}
-
 footer {
-  /* grid-area: f; */
-  /* background-color: lightpink; */
   background-color: darkgray;
 }
 
 .logo > picture > img:hover,
 .user-in:hover {
-  /* color: yellow;
-  background-color: black; */
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
   cursor: pointer;

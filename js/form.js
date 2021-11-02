@@ -31,7 +31,6 @@ function msgDisplay() {
             `;
   newDiv.className = "enrollment_message";
   newDiv.innerHTML = html;
-  // containerEl.appendChild(newDiv);
   document.body.appendChild(newDiv);
   containerEl.style.display = "none";
 }
